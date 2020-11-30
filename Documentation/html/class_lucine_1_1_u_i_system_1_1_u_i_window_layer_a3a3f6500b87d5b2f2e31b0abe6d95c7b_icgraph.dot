@@ -1,0 +1,14 @@
+digraph "Lucine.UISystem.UIWindowLayer.HideAll"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Lucine.UISystem.UIWindow\lLayer.HideAll",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Hide all windows of the layer"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lucine.UISystem.UIController.\lCloseAllWindows",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a89c5ab9b0f9df98917454d83c9e0f7f9",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Lucine.UISystem.UIController.\lHideAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a566e43db28b25120f6633183210fe0a0",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Lucine.UISystem.UIController.\lInitialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ab7ad652154253f753f088bf38005c803",tooltip=" "];
+}

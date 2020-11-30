@@ -1,0 +1,11 @@
+digraph "Lucine.UISystem.IUIWindowController"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Lucine.UISystem.IUIWindow\lController",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Interface to implement for windows screen controllers It is related to UIWindowParameters"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="IUIScreenController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_lucine_1_1_u_i_system_1_1_i_u_i_screen_controller.html",tooltip="Interface that a screen must implement"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Lucine.UISystem.UIWindow\l\< TParameters \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_window.html",tooltip="A window with another type of window parameters"];
+}

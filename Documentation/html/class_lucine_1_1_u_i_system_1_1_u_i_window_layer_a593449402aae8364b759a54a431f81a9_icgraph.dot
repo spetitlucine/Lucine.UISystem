@@ -1,0 +1,10 @@
+digraph "Lucine.UISystem.UIWindowLayer.IsVisible"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Lucine.UISystem.UIWindow\lLayer.IsVisible",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Return if the window is visible or not"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lucine.UISystem.UIController.\lIsWindowVisible",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#aeec731e93fa19f9add15e577f55707ec",tooltip=" "];
+}

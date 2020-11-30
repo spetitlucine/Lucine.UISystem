@@ -1,34 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Lucine.UISystem
 {
+    /// <summary>
+    /// Base class for WindowParameters
+    /// Implement the IUIWindowParameters
+    /// Default parameters for windows : hideWhenFocusLost (default true), isPopup (default false)
+    /// class must be serializable to show in inspector
+    /// </summary>
     [System.Serializable] 
     public class UIWindowParameters : IUIWindowParameters
     {
         [SerializeField] 
-        protected bool hideWhenFocusLost = true;
+        protected bool m_HideWhenFocusLost = true;
+        public bool HideWhenFocusLost
+        {
+            get => m_HideWhenFocusLost;
+            set => m_HideWhenFocusLost = value;
+        }
 
         [SerializeField]
-        protected bool isPopup = false;
+        protected bool m_IsPopup = false;
+        public bool IsPopup
+        {
+            get => m_IsPopup;
+            set => m_IsPopup = value;
+        }
 
         public UIWindowParameters()
         {
-            hideWhenFocusLost = true;
-            isPopup = false;
-        }
-        public bool HideWhenFocusLost
-        {
-            get => hideWhenFocusLost;
-            set => hideWhenFocusLost = value;
+            m_HideWhenFocusLost = true;
+            m_IsPopup = false;
         }
 
-        public bool IsPopup
-        {
-            get => isPopup;
-            set => isPopup = value;
-        }
     }
 }
 

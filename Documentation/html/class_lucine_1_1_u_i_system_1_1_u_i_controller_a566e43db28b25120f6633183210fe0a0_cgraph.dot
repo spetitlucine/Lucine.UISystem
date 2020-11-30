@@ -1,0 +1,16 @@
+digraph "Lucine.UISystem.UIController.HideAll"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Lucine.UISystem.UIController.\lHideAll",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lucine.UISystem.UIController.\lCloseAllWindows",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a89c5ab9b0f9df98917454d83c9e0f7f9",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Lucine.UISystem.UIWindow\lLayer.HideAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a3a3f6500b87d5b2f2e31b0abe6d95c7b",tooltip="Hide all windows of the layer"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Lucine.UISystem.UIController.\lHideAllPanels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ad4795e18d43e537a817e80d2e70ce1f0",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Lucine.UISystem.UILayerController.\lHideAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#a90128509885b1e498a2a770f6af25e6b",tooltip="Hide all screens of the layer animating them or not depending of parameter"];
+}

@@ -1,0 +1,10 @@
+digraph "Lucine.UISystem.UILayerController.HideScreen"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Lucine.UISystem.UILayerController.\lHideScreen",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This function is called to hide a screen It should be implemented in the inherited layer"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lucine.UISystem.UILayerController\l\< IUIWindowController \>::HideScreenById",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#a8970f2b5d69af482754ff8c59fc9991c",tooltip="Hide a screen from its id"];
+}

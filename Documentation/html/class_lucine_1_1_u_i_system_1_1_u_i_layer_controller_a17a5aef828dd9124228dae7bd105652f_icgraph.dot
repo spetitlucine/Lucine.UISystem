@@ -1,0 +1,12 @@
+digraph "Lucine.UISystem.UILayerController.ShowScreenById"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Lucine.UISystem.UILayerController.\lShowScreenById",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Show a screen using it's id. It will look in registred screen to find the associated controller"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lucine.UISystem.UIController.\lOpenWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#afef326931118c8277b6111809828ee2f",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Lucine.UISystem.UIController.\lShowPanel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ae01f7195d73304d375930b0dd784cb12",tooltip=" "];
+}

@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Lucine.UISystem;
-using UnityEngine;
-
-namespace Lucine.UISystem
+﻿namespace Lucine.UISystem
 {
+    /// <summary>
+    /// Panel controller interface
+    /// Nothing more thant a ScreenController interface
+    /// Nothing special to expose right now
+    /// </summary>
     public interface IUIPanelController : IUIScreenController
     {
     }

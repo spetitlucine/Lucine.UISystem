@@ -1,0 +1,22 @@
+digraph "Lucine.UISystem.UIController.Initialize"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Lucine.UISystem.UIController.\lInitialize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lucine.UISystem.UIController.\lDisableRaycaster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#adce7ed971cfa0401507a262c8662bba7",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Lucine.UISystem.UIController.\lEnableRaycaster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2ebe668975bea1693993dbd1a7e73c82",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Lucine.UISystem.UILayerController.\lHideAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#a90128509885b1e498a2a770f6af25e6b",tooltip="Hide all screens of the layer animating them or not depending of parameter"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Lucine.UISystem.UIWindow\lLayer.HideAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a3a3f6500b87d5b2f2e31b0abe6d95c7b",tooltip="Hide all windows of the layer"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Lucine.UISystem.UILayerController.\lInitialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#a1da8b2106e135b9c91f721e3df977244",tooltip="The initialization function. This is called to initialize a layer all child screen in the layer will ..."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Lucine.UISystem.UIWindow\lLayer.Initialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a7a6463dcb421fedfa1654944ee885725",tooltip="Windows layer initialization Creates screen transitionning list and initialize from base"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="BlackBackground.Hide",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_black_background.html#aee0377a30038c688bfa710b2addc7e66",tooltip="Hide the blackbackground"];
+}

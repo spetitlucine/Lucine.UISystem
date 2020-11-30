@@ -1,30 +1,56 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Lucine.UISystem
 {
+    /// <summary>
+    /// Layer for windows inherited of base UILayerController
+    /// It implements interface for UIWindowControllers
+    /// Unlike panels layer, the window controller should keep track of transitionning windows to disable interactions during transition
+    /// A panel is not aim to be interactable but only display information
+    /// We also keep track of current window. Right now it is not used maybe in the future
+    /// </summary>
     public class UIWindowLayer : UILayerController<IUIWindowController>
     {
-        private HashSet<IUIScreenController> screensTransitioning;
+        // the blackbackground processor (there's a default prefab for it to put in windows layer)
+        [SerializeField]
+        private BlackBackground m_BlackBackground = null;
+        
+        // a list of all transitionning screens (when this list has 0 element no transitioning is running and interaction can be enabled)
+        private List<IUIScreenController> m_screensTransitioning;
 
+        // the current window. Can be get but not set from outside since it the this layer controller that handles it
         public IUIWindowController CurrentWindow { get; private set; }
 
-        public event Action RequestScreenBlock;
-        public event Action RequestScreenUnblock;
+        // Callback to call when we want to disable or enable interactions
+        public Action DisableInteractionRequest;
+        public Action EnableInteractionRequest;
 
-        private bool IsScreenTransitionInProgress
-        {
-            get { return screensTransitioning.Count != 0; }
-        }
+        /// <summary>
+        /// Function that can indicated if any interaction is running
+        /// </summary>
+        private bool IsScreenTransitionInProgress => m_screensTransitioning.Count != 0;
 
+        /// <summary>
+        /// Windows layer initialization
+        /// Creates screen transitionning list and initialize from base
+        /// </summary>
         public override void Initialize()
         {
-            screensTransitioning = new HashSet<IUIScreenController>();
+            m_screensTransitioning = new List<IUIScreenController>();
+            // hide the blackbackground if exists
+            m_BlackBackground?.Hide();
             base.Initialize();
         }
 
+        /// <summary>
+        /// Override base layer register screen to add specific callback tracking
+        /// Window layer needs to be called when transition are starting and ending because of handles of interaction during transitions
+        /// It should be inform too when the unity ui asked to close generic handler (UnityClose)
+        /// </summary>
+        /// <param name="screenId">The screen id to register</param>
+        /// <param name="controller">The associated controller</param>
         protected override void ProcessScreenRegister(string screenId, IUIWindowController controller)
         {
             base.ProcessScreenRegister(screenId, controller);
@@ -33,6 +59,11 @@ namespace Lucine.UISystem
             controller.OnCloseRequest += OnCloseRequestedByWindow;
         }
 
+        /// <summary>
+        /// override base layer unregister to remove specific callbacks
+        /// </summary>
+        /// <param name="screenId">The screen id to unregister</param>
+        /// <param name="controller">The associated controller</param>
         protected override void ProcessScreenUnregister(string screenId, IUIWindowController controller)
         {
             base.ProcessScreenUnregister(screenId, controller);
@@ -41,19 +72,33 @@ namespace Lucine.UISystem
             controller.OnCloseRequest -= OnCloseRequestedByWindow;
         }
 
-        public override void ShowScreen(IUIWindowController screen)
+        /// <summary>
+        /// Show window controller without parameter
+        /// </summary>
+        /// <param name="screen">The window controller</param>
+        protected override void ShowScreen(IUIWindowController screen)
         {
             ShowScreen<IUIWindowParameters>(screen, null);
         }
 
-        public override void ShowScreen<TProp>(IUIWindowController screen, TProp properties)
+        /// <summary>
+        /// show window window controller with new given parameters
+        /// </summary>
+        /// <param name="screen">The window controller</param>
+        /// <param name="parameters">The parameters to set</param>
+        /// <typeparam name="TParameters">Type of the parameters</typeparam>
+        public override void ShowScreen<TParameters>(IUIWindowController screen, TParameters parameters)
         {
-            IUIWindowParameters windowParameters = properties as IUIWindowParameters;
+            IUIWindowParameters windowParameters = parameters as IUIWindowParameters;
 
-            DoShow(screen, windowParameters);
+            ProcessShow(screen, windowParameters);
         }
 
-        public override void HideScreen(IUIWindowController screen)
+        /// <summary>
+        /// Hide the window with given window controller
+        /// </summary>
+        /// <param name="screen"></param>
+        protected override void HideScreen(IUIWindowController screen)
         {
             if (screen == CurrentWindow)
             {
@@ -64,109 +109,129 @@ namespace Lucine.UISystem
             }
             else
             {
-                Debug.LogError(
-                    string.Format(
-                        "[UIWindowLayer] Hide requested on WindowId {0} but that's not the currently open one ({1})! Ignoring request.",
-                        screen.ScreenId, CurrentWindow != null ? CurrentWindow.ScreenId : "current is null"));
+                string message = CurrentWindow != null ? CurrentWindow.ScreenId : "current is null";
+                Debug.LogError($"[UIWindowLayer] Hide requested on WindowId {screen.ScreenId} but that's not the currently open one ({message})! Ignoring request.");
             }
         }
 
+        /// <summary>
+        /// Hide all windows of the layer
+        /// </summary>
+        /// <param name="shouldAnimateWhenHiding"></param>
         public override void HideAll(bool shouldAnimateWhenHiding = true)
         {
             base.HideAll(shouldAnimateWhenHiding);
             CurrentWindow = null;
         }
 
-        public override void ReparentScreen(IUIScreenController controller, Transform screenTransform)
+        /// <summary>
+        /// Really show a window. 
+        /// but if it is a popup
+        /// </summary>
+        /// <param name="screen"></param>
+        /// <param name="parameters"></param>
+        private void ProcessShow(IUIWindowController screen, IUIWindowParameters parameters)
         {
-            IUIWindowController window = controller as IUIWindowController;
-
-            if (window == null)
-            {
-                Debug.LogError("[UIWindowLayer] Screen " + screenTransform.name + " is not a Window!");
-            }
-            else
-            {
-                if (window.IsPopup)
-                {
-
-                    // make it foreground
-                    return;
-                }
-            }
-
-            base.ReparentScreen(controller, screenTransform);
-        }
-
-        private void DoShow(IUIWindowController screen, IUIWindowParameters parameters)
-        {
-            if (CurrentWindow != null
-                && CurrentWindow.HideWhenFocusLost
-                && !screen.IsPopup)
+            //If the current window must be hidden when loosing foreground hide it before opening the new one
+            if (CurrentWindow != null && CurrentWindow.HideWhenForegroundLost && !screen.IsPopup)
             {
                 CurrentWindow.Hide();
             }
 
-            AddTransition(screen);
-
+            // if the window is a popup, show the background
             if (screen.IsPopup)
             {
-                ShowDarkBackground(true);
+                m_BlackBackground?.Show();
             }
 
+            // register the transition
+            AddTransition(screen);
+
+            // show the new window
             screen.Show();
 
+            // make it current one
             CurrentWindow = screen;
         }
 
 
+        /// <summary>
+        /// This callback is called when the UnityUIClose event is launched
+        /// </summary>
+        /// <param name="screen"></param>
         private void OnCloseRequestedByWindow(IUIScreenController screen)
         {
             HideScreen(screen as IUIWindowController);
         }
 
+        /// <summary>
+        /// callback when out animation is done
+        /// </summary>
+        /// <param name="screen"></param>
         private void OnOutAnimationFinished(IUIScreenController screen)
         {
+            // remove from current transition list
             RemoveTransition(screen);
+            
+            // if window is popup then we can remove the blackscreen
             IUIWindowController window = screen as IUIWindowController;
-            if (window.IsPopup)
+            if (window != null && window.IsPopup)
             {
-                ShowDarkBackground(false);
+                m_BlackBackground?.Hide();
             }
         }
 
+        /// <summary>
+        /// called when intransition is done. 
+        /// </summary>
+        /// <param name="screen"></param>
         private void OnInAnimationFinished(IUIScreenController screen)
         {
+            // can remove this one from current transition list
             RemoveTransition(screen);
         }
 
+        /// <summary>
+        /// keep track of running transition in order to disable interactions during the transitions
+        /// </summary>
+        /// <param name="screen"></param>
         private void AddTransition(IUIScreenController screen)
         {
-            screensTransitioning.Add(screen);
-            RequestScreenBlock?.Invoke();
+            // if no interaction was in progress ask to disable interactions
+            if (!IsScreenTransitionInProgress)
+            {
+                DisableInteractionRequest?.Invoke();
+            }
+
+            // add it to transition list to be able to reactivate interactions
+            m_screensTransitioning.Add(screen);
         }
 
+        /// <summary>
+        ///  Remove transition from current transition list and reactivate interactions if neeeded
+        /// </summary>
+        /// <param name="screen"></param>
         private void RemoveTransition(IUIScreenController screen)
         {
-            if(screensTransitioning.Contains(screen))
-                screensTransitioning.Remove(screen);
+            if(m_screensTransitioning.Contains(screen))
+                m_screensTransitioning.Remove(screen);
             else
             {
                 Debug.Log("[UIWindowLayer : try to remove a transition not started");
             }
             
+            // if no more transitions reactivate interaction
             if (!IsScreenTransitionInProgress)
             {
-                RequestScreenUnblock?.Invoke();
+                EnableInteractionRequest?.Invoke();
             }
         }
 
-        private void ShowDarkBackground(bool show)
-        {
-            Debug.Log("Show dark background "+ show);
-            
-        }
-
+        /// <summary>
+        /// Return if the window is visible or not
+        /// </summary>
+        /// <param name="windowId"></param>
+        /// <returns></returns>
         public bool IsVisible(string windowId)
         {
             return IsScreenVisibleById(windowId);

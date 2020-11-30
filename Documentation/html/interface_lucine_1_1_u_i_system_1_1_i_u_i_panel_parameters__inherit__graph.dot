@@ -1,0 +1,11 @@
+digraph "Lucine.UISystem.IUIPanelParameters"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Lucine.UISystem.IUIPanel\lParameters",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Interface for panel parameters Nothing to implement yet, since no special parameters exists for panel..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="IUIScreenParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_lucine_1_1_u_i_system_1_1_i_u_i_screen_parameters.html",tooltip="Base interface for screen parameters No parameters screens"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Lucine.UISystem.UIPanelParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_panel_parameters.html",tooltip="Class to implements IUIPanelParameters interface Class must be serializable to show in inspector righ..."];
+}

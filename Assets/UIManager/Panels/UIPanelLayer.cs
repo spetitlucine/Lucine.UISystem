@@ -1,12 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
 namespace Lucine.UISystem
 {
+    /// <summary>
+    /// Panel Layer
+    /// Panel is just like a screen so there's not a lot of overriding 
+    /// </summary>
     public class UIPanelLayer : UILayerController<IUIPanelController>
     {
-         public override void ShowScreen(IUIPanelController screen)
+        protected override void ShowScreen(IUIPanelController screen)
         {
             screen.Show();
         }
@@ -16,7 +17,7 @@ namespace Lucine.UISystem
             screen.Show(parameters);
         }
 
-        public override void HideScreen(IUIPanelController screen)
+        protected override void HideScreen(IUIPanelController screen)
         {
             screen.Hide();
         }

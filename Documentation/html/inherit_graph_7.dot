@@ -1,0 +1,38 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node29 [label="Lucine.UISystem.IUIScreen\lController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_lucine_1_1_u_i_system_1_1_i_u_i_screen_controller.html",tooltip="Interface that a screen must implement"];
+  Node29 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="Lucine.UISystem.IUIPanel\lController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_lucine_1_1_u_i_system_1_1_i_u_i_panel_controller.html",tooltip="Panel controller interface Nothing more thant a ScreenController interface Nothing special to expose ..."];
+  Node30 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Lucine.UISystem.UIPanel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_panel.html",tooltip="Panel with basic Panel Parameters"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="DemoPanel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_demo_panel.html",tooltip=" "];
+  Node29 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="Lucine.UISystem.IUIWindow\lController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_lucine_1_1_u_i_system_1_1_i_u_i_window_controller.html",tooltip="Interface to implement for windows screen controllers It is related to UIWindowParameters"];
+  Node31 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="Lucine.UISystem.UIWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_window.html",tooltip="A basic window with default windows parameters"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="DemoPopup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_demo_popup.html",tooltip=" "];
+  Node29 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Lucine.UISystem.UIScreen\lController\< TParameters \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_screen_controller.html",tooltip="UIScreen controller is the base class for all types of windows, panels, popup whatever u want It impl..."];
+  Node18 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="MonoBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="BlackBackground",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_black_background.html",tooltip="This class helps to handle black background for popups"];
+  Node15 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Lucine.UISystem.UILayerController\l\< TScreenController \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html",tooltip="The layer class. The layer is responsible of all child screens, we should pass from the layer to show..."];
+  Node15 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Lucine.UISystem.UITransition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_transition.html",tooltip="Base class for Transition implementation Transition are animations that can be done when opening or c..."];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="FadeTransition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fade_transition.html",tooltip=" "];
+  Node15 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="Singleton\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_singleton.html",tooltip="Inherit from this base class to create a singleton. e.g. public class MyClassName : Singleton<MyClass..."];
+  Node15 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="UIStarter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_starter.html",tooltip=" "];
+}

@@ -1,16 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Lucine.Helpers;
+﻿using Lucine.Helpers;
 using Lucine.UISystem;
-using UnityEngine;
 
 public class DemoPanel : UIPanel
 {
+    // define a OnPanelCloseEvent with one parameter DemoPanel type
     public class OnPanelClosedEvent : Event<DemoPanel> { }
 
+    /// <summary>
+    /// Called by unity when the close panel button is pressed
+    /// </summary>
     public void OnClosePanel()
     {
-        Events.Instance.Get<OnPanelClosedEvent>().Dispatch(this);
+        // dispatch the event to all listener giving in parameter the panel which is closed
+        Events.Instance.TypeOf<OnPanelClosedEvent>().Dispatch(this);
+        
+        // hide the panel
         Hide();
     }
 }

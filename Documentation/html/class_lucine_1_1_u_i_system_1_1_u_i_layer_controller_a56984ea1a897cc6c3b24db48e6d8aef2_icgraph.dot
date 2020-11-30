@@ -1,0 +1,10 @@
+digraph "Lucine.UISystem.UILayerController.ShowScreen"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Lucine.UISystem.UILayerController.\lShowScreen",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This function is called to show a screen It should be implemented in the inherited layer"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lucine.UISystem.UILayerController\l\< IUIWindowController \>::ShowScreenById",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#a17a5aef828dd9124228dae7bd105652f",tooltip="Show a screen using it's id. It will look in registred screen to find the associated controller"];
+}

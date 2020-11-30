@@ -1,0 +1,14 @@
+digraph "Lucine.UISystem.UIScreenController.Show"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Lucine.UISystem.UIScreen\lController.Show",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Show a screen"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lucine.UISystem.UIScreen\lController.AdjustHierarchyOnShow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_screen_controller.html#a9a1973556260af115088ccae0dbd0799",tooltip="This function is called when the screen will be shown (before transition) It could be override to adj..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Lucine.UISystem.UIScreen\lController.OnParametersSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_screen_controller.html#a79717f7ff38c2310fb8d9fe5039fab33",tooltip="Function called after parameters are set Could be overriden to do specific task (maybe set some inter..."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Lucine.UISystem.UIScreen\lController.SetParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lucine_1_1_u_i_system_1_1_u_i_screen_controller.html#aeb30b357fda851f0a4ee037b38f1318e",tooltip="Function called when parameters are really affected to screen when given as parameters to Show Could ..."];
+}

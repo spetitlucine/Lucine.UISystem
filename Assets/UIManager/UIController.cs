@@ -32,6 +32,8 @@ namespace Lucine.UISystem
             m_WindowLayer = GetComponentInChildren<UIWindowLayer>();
             m_WindowLayer.Initialize();
             m_WindowLayer.HideAll();
+            m_WindowLayer.DisableInteractionRequest += DisableRaycaster;
+            m_WindowLayer.EnableInteractionRequest += EnableRaycaster;
             m_PanelLayer = GetComponentInChildren<UIPanelLayer>();
             m_PanelLayer.Initialize();
             m_PanelLayer.HideAll();
@@ -57,11 +59,6 @@ namespace Lucine.UISystem
         public bool IsWindowVisible(string windowId)
         {
             return m_WindowLayer.IsVisible(windowId);
-        }
-
-        public void ReparentWindow(string windowId, Transform t)
-        {
-            
         }
 
         public void ShowPanel(string panelId)

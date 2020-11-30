@@ -1,0 +1,9 @@
+digraph "Lucine.UISystem.IUIPanelController"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Lucine.UISystem.IUIPanel\lController",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Panel controller interface Nothing more thant a ScreenController interface Nothing special to expose ..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="IUIScreenController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_lucine_1_1_u_i_system_1_1_i_u_i_screen_controller.html",tooltip="Interface that a screen must implement"];
+}
