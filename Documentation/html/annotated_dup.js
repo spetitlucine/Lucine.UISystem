@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "Lucine", "namespace_lucine.html", "namespace_lucine" ],
+    [ "ApplicationQuitEvent", "class_application_quit_event.html", null ],
     [ "BlackBackground", "class_black_background.html", "class_black_background" ],
     [ "DemoPanel", "class_demo_panel.html", "class_demo_panel" ],
     [ "DemoPopup", "class_demo_popup.html", "class_demo_popup" ],

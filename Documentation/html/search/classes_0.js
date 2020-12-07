@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blackbackground_125',['BlackBackground',['../class_black_background.html',1,'']]]
+  ['applicationquitevent_126',['ApplicationQuitEvent',['../class_application_quit_event.html',1,'']]]
 ];

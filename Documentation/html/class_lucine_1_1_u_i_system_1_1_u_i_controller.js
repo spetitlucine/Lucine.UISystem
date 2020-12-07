@@ -1,6 +1,7 @@
 var class_lucine_1_1_u_i_system_1_1_u_i_controller =
 [
     [ "CloseAllWindows", "class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a89c5ab9b0f9df98917454d83c9e0f7f9", null ],
+    [ "CloseCurrentWindow", "class_lucine_1_1_u_i_system_1_1_u_i_controller.html#aff6c263cd607bbc4aba4568b4664c412", null ],
     [ "CloseWindow", "class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a5c05804b0bd005a99848a068bbcacfc0", null ],
     [ "DisableRaycaster", "class_lucine_1_1_u_i_system_1_1_u_i_controller.html#adce7ed971cfa0401507a262c8662bba7", null ],
     [ "EnableRaycaster", "class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2ebe668975bea1693993dbd1a7e73c82", null ],

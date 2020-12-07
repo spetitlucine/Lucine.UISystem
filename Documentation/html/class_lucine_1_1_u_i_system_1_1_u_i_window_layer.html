@@ -120,6 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a593449402aae8364b759a54a431f81a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a593449402aae8364b759a54a431f81a9">IsVisible</a> (string windowId)</td></tr>
 <tr class="memdesc:a593449402aae8364b759a54a431f81a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the window is visible or not  <a href="class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a593449402aae8364b759a54a431f81a9">More...</a><br /></td></tr>
 <tr class="separator:a593449402aae8364b759a54a431f81a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac392089c5b177686429a41300739c6da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#ac392089c5b177686429a41300739c6da">CloseCurrentWindow</a> ()</td></tr>
+<tr class="memdesc:ac392089c5b177686429a41300739c6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the current Window  <a href="class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#ac392089c5b177686429a41300739c6da">More...</a><br /></td></tr>
+<tr class="separator:ac392089c5b177686429a41300739c6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_lucine_1_1_u_i_system_1_1_u_i_layer_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_lucine_1_1_u_i_system_1_1_u_i_layer_controller')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html">Lucine.UISystem.UILayerController&lt; IUIWindowController &gt;</a></td></tr>
 <tr class="memitem:af3aeb628bd48dcec3ddb87e7014c222c inherit pub_methods_class_lucine_1_1_u_i_system_1_1_u_i_layer_controller"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#af3aeb628bd48dcec3ddb87e7014c222c">ShowScreen&lt; TParameters &gt;</a> (TScreenController screen, TParameters parameters)</td></tr>
 <tr class="memdesc:af3aeb628bd48dcec3ddb87e7014c222c inherit pub_methods_class_lucine_1_1_u_i_system_1_1_u_i_layer_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is used to show a screen but giving it some parameters (the parameters used when defining the screen) It should be implemented in the inherited layer  <a href="class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#af3aeb628bd48dcec3ddb87e7014c222c">More...</a><br /></td></tr>
@@ -186,6 +189,25 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Layer for windows inherited of base <a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html" title="The layer class. The layer is responsible of all child screens, we should pass from the layer to show...">UILayerController</a> It implements interface for UIWindowControllers Unlike panels layer, the window controller should keep track of transitionning windows to disable interactions during transition A panel is not aim to be interactable but only display information We also keep track of current window. Right now it is not used maybe in the future </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac392089c5b177686429a41300739c6da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac392089c5b177686429a41300739c6da">&#9670;&nbsp;</a></span>CloseCurrentWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lucine.UISystem.UIWindowLayer.CloseCurrentWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close the current Window </p>
+
+</div>
+</div>
 <a id="a3a3f6500b87d5b2f2e31b0abe6d95c7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a3f6500b87d5b2f2e31b0abe6d95c7b">&#9670;&nbsp;</a></span>HideAll()</h2>
 

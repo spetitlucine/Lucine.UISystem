@@ -91,6 +91,9 @@ $(document).ready(function(){initNavTree('class_fade_transition.html',''); initR
 <div class="title">FadeTransition Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Sample class using DOTWeen to fade a Screen Inherited from UITransition and implement Play function  
+ <a href="class_fade_transition.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for FadeTransition:</div>
 <div class="dyncontent">
@@ -104,7 +107,7 @@ Inheritance diagram for FadeTransition:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a67c55b78c7ab695547700bc69e9fd86d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade_transition.html#a67c55b78c7ab695547700bc69e9fd86d">Play</a> (Transform target, Action callWhenFinished)</td></tr>
-<tr class="memdesc:a67c55b78c7ab695547700bc69e9fd86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the transition It is the only entry point from transitions  <a href="class_fade_transition.html#a67c55b78c7ab695547700bc69e9fd86d">More...</a><br /></td></tr>
+<tr class="memdesc:a67c55b78c7ab695547700bc69e9fd86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The only function to implement  <a href="class_fade_transition.html#a67c55b78c7ab695547700bc69e9fd86d">More...</a><br /></td></tr>
 <tr class="separator:a67c55b78c7ab695547700bc69e9fd86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -116,7 +119,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a6e2e63b68f7ca5cf58d4167d64c7ed00"><td class="memItemLeft" align="right" valign="top">Ease&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fade_transition.html#a6e2e63b68f7ca5cf58d4167d64c7ed00">m_Ease</a> = Ease.Linear</td></tr>
 <tr class="separator:a6e2e63b68f7ca5cf58d4167d64c7ed00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Sample class using DOTWeen to fade a Screen Inherited from UITransition and implement Play function </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a67c55b78c7ab695547700bc69e9fd86d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67c55b78c7ab695547700bc69e9fd86d">&#9670;&nbsp;</a></span>Play()</h2>
 
@@ -130,13 +135,13 @@ Protected Attributes</h2></td></tr>
           <td class="memname">override void FadeTransition.Play </td>
           <td>(</td>
           <td class="paramtype">Transform&#160;</td>
-          <td class="paramname"><em>animatedTransform</em>, </td>
+          <td class="paramname"><em>target</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Action&#160;</td>
-          <td class="paramname"><em>onFinished</em>&#160;</td>
+          <td class="paramname"><em>callWhenFinished</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -151,11 +156,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Plays the transition It is the only entry point from transitions </p>
+<p>The only function to implement </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">animatedTransform</td><td>The transform to move</td></tr>
-    <tr><td class="paramname">onFinished</td><td>The action to call when finished. used by ScreenController to know when transition is done</td></tr>
+    <tr><td class="paramname">target</td><td>The target transform to move</td></tr>
+    <tr><td class="paramname">callWhenFinished</td><td>must be call when transition is over</td></tr>
   </table>
   </dd>
 </dl>

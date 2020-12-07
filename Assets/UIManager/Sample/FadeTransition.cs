@@ -5,7 +5,7 @@ using UnityEngine;
 
 /// <summary>
 /// Sample class using DOTWeen to fade a Screen
-/// Inherite from UITransition and implement Play function
+/// Inherited from UITransition and implement Play function
 /// </summary>
 public class FadeTransition : UITransition
 {

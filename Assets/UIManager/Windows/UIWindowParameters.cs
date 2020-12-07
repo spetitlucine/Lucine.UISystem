@@ -5,18 +5,18 @@ namespace Lucine.UISystem
     /// <summary>
     /// Base class for WindowParameters
     /// Implement the IUIWindowParameters
-    /// Default parameters for windows : hideWhenFocusLost (default true), isPopup (default false)
+    /// Default parameters for windows : hideWhenForegroundLost (default true), isPopup (default false)
     /// class must be serializable to show in inspector
     /// </summary>
     [System.Serializable] 
     public class UIWindowParameters : IUIWindowParameters
     {
         [SerializeField] 
-        protected bool m_HideWhenFocusLost = true;
-        public bool HideWhenFocusLost
+        protected bool m_HideWhenForegroundLost = true;
+        public bool HideWhenForegroundLost
         {
-            get => m_HideWhenFocusLost;
-            set => m_HideWhenFocusLost = value;
+            get => m_HideWhenForegroundLost;
+            set => m_HideWhenForegroundLost = value;
         }
 
         [SerializeField]
@@ -29,7 +29,7 @@ namespace Lucine.UISystem
 
         public UIWindowParameters()
         {
-            m_HideWhenFocusLost = true;
+            m_HideWhenForegroundLost = true;
             m_IsPopup = false;
         }
 

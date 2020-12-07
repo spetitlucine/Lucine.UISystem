@@ -14,7 +14,5 @@ var dir_ba284c900bc624b6b2675710c0f32ce2 =
     [ "FadeTransition.cs", "_fade_transition_8cs.html", [
       [ "FadeTransition", "class_fade_transition.html", "class_fade_transition" ]
     ] ],
-    [ "UIStarter.cs", "_u_i_starter_8cs.html", [
-      [ "UIStarter", "class_u_i_starter.html", "class_u_i_starter" ]
-    ] ]
+    [ "UIStarter.cs", "_u_i_starter_8cs.html", "_u_i_starter_8cs" ]
 ];

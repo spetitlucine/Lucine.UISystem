@@ -13,6 +13,6 @@
         /// <summary>
         /// should window be hidden when loosing foreground (another window on top of it)
         /// </summary>
-        bool HideWhenFocusLost { get; set; } 
+        bool HideWhenForegroundLost { get; set; } 
     }
 }

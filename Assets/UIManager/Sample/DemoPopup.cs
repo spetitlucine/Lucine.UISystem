@@ -5,7 +5,7 @@ using Lucine.UISystem;
 using UnityEngine;
 
 /// <summary>
-/// Demo popup is a basic window (inside unity we set its ipopup parameter)
+/// Demo popup is a basic window (inside unity we set its ispopup parameter)
 /// </summary>
 public class DemoPopup : UIWindow
 {

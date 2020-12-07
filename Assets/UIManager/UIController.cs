@@ -75,6 +75,14 @@ namespace Lucine.UISystem
         }
 
         /// <summary>
+        /// Close the current window
+        /// </summary>
+        public void CloseCurrentWindow()
+        {
+            m_WindowLayer.CloseCurrentWindow();
+        }
+
+        /// <summary>
         /// Close all opened windows()
         /// </summary>
         public void CloseAllWindows()

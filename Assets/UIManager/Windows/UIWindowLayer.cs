@@ -236,5 +236,14 @@ namespace Lucine.UISystem
         {
             return IsScreenVisibleById(windowId);
         }
+
+        /// <summary>
+        /// Close the current Window
+        /// </summary>
+        public void CloseCurrentWindow()
+        {
+            HideScreen(CurrentWindow);
+            CurrentWindow = null;
+        }
     }
 }

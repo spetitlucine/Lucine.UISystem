@@ -1,5 +1,6 @@
 var class_lucine_1_1_u_i_system_1_1_u_i_window_layer =
 [
+    [ "CloseCurrentWindow", "class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#ac392089c5b177686429a41300739c6da", null ],
     [ "HideAll", "class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a3a3f6500b87d5b2f2e31b0abe6d95c7b", null ],
     [ "HideScreen", "class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a9ec128e58eb7bce9f30fae6f397d3e68", null ],
     [ "Initialize", "class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a7a6463dcb421fedfa1654944ee885725", null ],

@@ -85,11 +85,15 @@ $(document).ready(function(){initNavTree('class_lucine_1_1_u_i_system_1_1_u_i_co
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Lucine.UISystem.UIController Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class is just a singleton that controls all the <a class="el" href="namespace_lucine_1_1_u_i_system.html">UISystem</a> You have use it to access all ui features, such as panel, windows and layers It requires a Canvas and a GraphicRaycaster  
+ <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Lucine.UISystem.UIController:</div>
 <div class="dyncontent">
@@ -102,34 +106,54 @@ Inheritance diagram for Lucine.UISystem.UIController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab7ad652154253f753f088bf38005c803"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ab7ad652154253f753f088bf38005c803">Initialize</a> ()</td></tr>
-<tr class="separator:ab7ad652154253f753f088bf38005c803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afef326931118c8277b6111809828ee2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#afef326931118c8277b6111809828ee2f">OpenWindow</a> (string windowId)</td></tr>
+<tr class="memdesc:afef326931118c8277b6111809828ee2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a window giving its id  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#afef326931118c8277b6111809828ee2f">More...</a><br /></td></tr>
 <tr class="separator:afef326931118c8277b6111809828ee2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c05804b0bd005a99848a068bbcacfc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a5c05804b0bd005a99848a068bbcacfc0">CloseWindow</a> (string windowId)</td></tr>
+<tr class="memdesc:a5c05804b0bd005a99848a068bbcacfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a window giving its id  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a5c05804b0bd005a99848a068bbcacfc0">More...</a><br /></td></tr>
 <tr class="separator:a5c05804b0bd005a99848a068bbcacfc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6c263cd607bbc4aba4568b4664c412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#aff6c263cd607bbc4aba4568b4664c412">CloseCurrentWindow</a> ()</td></tr>
+<tr class="memdesc:aff6c263cd607bbc4aba4568b4664c412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the current window  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#aff6c263cd607bbc4aba4568b4664c412">More...</a><br /></td></tr>
+<tr class="separator:aff6c263cd607bbc4aba4568b4664c412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89c5ab9b0f9df98917454d83c9e0f7f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a89c5ab9b0f9df98917454d83c9e0f7f9">CloseAllWindows</a> ()</td></tr>
+<tr class="memdesc:a89c5ab9b0f9df98917454d83c9e0f7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close all opened windows()  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a89c5ab9b0f9df98917454d83c9e0f7f9">More...</a><br /></td></tr>
 <tr class="separator:a89c5ab9b0f9df98917454d83c9e0f7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeec731e93fa19f9add15e577f55707ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#aeec731e93fa19f9add15e577f55707ec">IsWindowVisible</a> (string windowId)</td></tr>
+<tr class="memdesc:aeec731e93fa19f9add15e577f55707ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask if the window id is visible (open)  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#aeec731e93fa19f9add15e577f55707ec">More...</a><br /></td></tr>
 <tr class="separator:aeec731e93fa19f9add15e577f55707ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae01f7195d73304d375930b0dd784cb12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ae01f7195d73304d375930b0dd784cb12">ShowPanel</a> (string panelId)</td></tr>
+<tr class="memdesc:ae01f7195d73304d375930b0dd784cb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a panel (pendent of opening a window)  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ae01f7195d73304d375930b0dd784cb12">More...</a><br /></td></tr>
 <tr class="separator:ae01f7195d73304d375930b0dd784cb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4795e18d43e537a817e80d2e70ce1f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ad4795e18d43e537a817e80d2e70ce1f0">HideAllPanels</a> ()</td></tr>
-<tr class="separator:ad4795e18d43e537a817e80d2e70ce1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a566e43db28b25120f6633183210fe0a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a566e43db28b25120f6633183210fe0a0">HideAll</a> ()</td></tr>
-<tr class="separator:a566e43db28b25120f6633183210fe0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e6e491ff5c8548d831cf2057619edad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2e6e491ff5c8548d831cf2057619edad">HidePanel</a> (string panelId)</td></tr>
+<tr class="memdesc:a2e6e491ff5c8548d831cf2057619edad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide a panel givin its id  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2e6e491ff5c8548d831cf2057619edad">More...</a><br /></td></tr>
 <tr class="separator:a2e6e491ff5c8548d831cf2057619edad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4795e18d43e537a817e80d2e70ce1f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ad4795e18d43e537a817e80d2e70ce1f0">HideAllPanels</a> ()</td></tr>
+<tr class="memdesc:ad4795e18d43e537a817e80d2e70ce1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide all opened panels  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ad4795e18d43e537a817e80d2e70ce1f0">More...</a><br /></td></tr>
+<tr class="separator:ad4795e18d43e537a817e80d2e70ce1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab572dabbebf9dcd5ee49e5b272e32b45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ab572dabbebf9dcd5ee49e5b272e32b45">IsPanelVisible</a> (string panelId)</td></tr>
+<tr class="memdesc:ab572dabbebf9dcd5ee49e5b272e32b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is a panel visible  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ab572dabbebf9dcd5ee49e5b272e32b45">More...</a><br /></td></tr>
 <tr class="separator:ab572dabbebf9dcd5ee49e5b272e32b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566e43db28b25120f6633183210fe0a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a566e43db28b25120f6633183210fe0a0">HideAll</a> ()</td></tr>
+<tr class="memdesc:a566e43db28b25120f6633183210fe0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide every window and panel  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a566e43db28b25120f6633183210fe0a0">More...</a><br /></td></tr>
+<tr class="separator:a566e43db28b25120f6633183210fe0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ebe668975bea1693993dbd1a7e73c82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2ebe668975bea1693993dbd1a7e73c82">EnableRaycaster</a> ()</td></tr>
+<tr class="memdesc:a2ebe668975bea1693993dbd1a7e73c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback to enable interactions  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2ebe668975bea1693993dbd1a7e73c82">More...</a><br /></td></tr>
 <tr class="separator:a2ebe668975bea1693993dbd1a7e73c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adce7ed971cfa0401507a262c8662bba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#adce7ed971cfa0401507a262c8662bba7">DisableRaycaster</a> ()</td></tr>
+<tr class="memdesc:adce7ed971cfa0401507a262c8662bba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to disable interactions  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#adce7ed971cfa0401507a262c8662bba7">More...</a><br /></td></tr>
 <tr class="separator:adce7ed971cfa0401507a262c8662bba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2505e3c72d39f999f4835ea586bfb133"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2505e3c72d39f999f4835ea586bfb133">IsScreenRegistered</a> (string screenId)</td></tr>
+<tr class="memdesc:a2505e3c72d39f999f4835ea586bfb133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask if a screen (window or panel is registred with its id)  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2505e3c72d39f999f4835ea586bfb133">More...</a><br /></td></tr>
 <tr class="separator:a2505e3c72d39f999f4835ea586bfb133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b65c385e96fa55808e8fc7cd47d869"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a19b65c385e96fa55808e8fc7cd47d869">IsScreenRegistered</a> (string screenId, out Type type)</td></tr>
+<tr class="memdesc:a19b65c385e96fa55808e8fc7cd47d869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask if a screen is registred and return its type  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a19b65c385e96fa55808e8fc7cd47d869">More...</a><br /></td></tr>
 <tr class="separator:a19b65c385e96fa55808e8fc7cd47d869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab7ad652154253f753f088bf38005c803"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ab7ad652154253f753f088bf38005c803">Initialize</a> ()</td></tr>
+<tr class="memdesc:ab7ad652154253f753f088bf38005c803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html" title="This class is just a singleton that controls all the UISystem You have use it to access all ui featur...">UIController</a> cache the graphics ray caster, the maincanvas, the main_camera used to render the canvas  <a href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ab7ad652154253f753f088bf38005c803">More...</a><br /></td></tr>
+<tr class="separator:ab7ad652154253f753f088bf38005c803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -138,7 +162,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a54103e8475b2a352ee759d5732307534 inherit properties_class_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access singleton instance through this propriety.  <a href="class_singleton.html#a54103e8475b2a352ee759d5732307534">More...</a><br /></td></tr>
 <tr class="separator:a54103e8475b2a352ee759d5732307534 inherit properties_class_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is just a singleton that controls all the <a class="el" href="namespace_lucine_1_1_u_i_system.html">UISystem</a> You have use it to access all ui features, such as panel, windows and layers It requires a Canvas and a GraphicRaycaster </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a89c5ab9b0f9df98917454d83c9e0f7f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89c5ab9b0f9df98917454d83c9e0f7f9">&#9670;&nbsp;</a></span>CloseAllWindows()</h2>
 
@@ -153,6 +179,27 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Close all opened windows() </p>
+
+</div>
+</div>
+<a id="aff6c263cd607bbc4aba4568b4664c412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff6c263cd607bbc4aba4568b4664c412">&#9670;&nbsp;</a></span>CloseCurrentWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lucine.UISystem.UIController.CloseCurrentWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close the current window </p>
 
 </div>
 </div>
@@ -172,6 +219,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Close a window giving its id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">windowId</td><td>The id of the window</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="adce7ed971cfa0401507a262c8662bba7"></a>
@@ -188,6 +243,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Callback to disable interactions </p>
 
 </div>
 </div>
@@ -206,6 +263,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>callback to enable interactions </p>
+
 </div>
 </div>
 <a id="a566e43db28b25120f6633183210fe0a0"></a>
@@ -222,6 +281,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Hide every window and panel </p>
 
 </div>
 </div>
@@ -240,6 +301,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Hide all opened panels </p>
+
 </div>
 </div>
 <a id="a2e6e491ff5c8548d831cf2057619edad"></a>
@@ -257,6 +320,14 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Hide a panel givin its id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panelId</td><td>id to show</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -278,10 +349,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Initialize the <a class="el" href="class_lucine_1_1_u_i_system_1_1_u_i_controller.html" title="This class is just a singleton that controls all the UISystem You have use it to access all ui featur...">UIController</a> cache the graphics ray caster, the maincanvas, the main_camera used to render the canvas </p>
 
 </div>
 </div>
@@ -301,6 +374,15 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Is a panel visible </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panelId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 </div>
 </div>
 <a id="a2505e3c72d39f999f4835ea586bfb133"></a>
@@ -318,6 +400,15 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Ask if a screen (window or panel is registred with its id) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -347,6 +438,16 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Ask if a screen is registred and return its type </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenId</td><td>id to test</td></tr>
+    <tr><td class="paramname">type</td><td>returned type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if registred in this case type is valid</dd></dl>
+
 </div>
 </div>
 <a id="aeec731e93fa19f9add15e577f55707ec"></a>
@@ -364,6 +465,15 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Ask if the window id is visible (open) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">windowId</td><td>id of the window to test</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if visible</dd></dl>
 
 </div>
 </div>
@@ -383,6 +493,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Open a window giving its id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">windowId</td><td>The id (name) of the window</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae01f7195d73304d375930b0dd784cb12"></a>
@@ -400,6 +518,14 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Show a panel (pendent of opening a window) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panelId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

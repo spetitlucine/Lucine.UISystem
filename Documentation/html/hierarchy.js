@@ -1,6 +1,8 @@
 var hierarchy =
 [
-    [ "Lucine.Helpers.Event", "class_lucine_1_1_helpers_1_1_event.html", null ],
+    [ "Lucine.Helpers.Event", "class_lucine_1_1_helpers_1_1_event.html", [
+      [ "ApplicationQuitEvent", "class_application_quit_event.html", null ]
+    ] ],
     [ "Lucine.Helpers.Event< DemoPanel >", "class_lucine_1_1_helpers_1_1_event.html", [
       [ "DemoPanel.OnPanelClosedEvent", "class_demo_panel_1_1_on_panel_closed_event.html", null ]
     ] ],

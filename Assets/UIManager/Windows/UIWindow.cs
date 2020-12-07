@@ -15,7 +15,7 @@
         ///  implement IUIWindow interface
         ///  HideWhenForeground lost. return 
         /// </summary>
-        public bool HideWhenForegroundLost => Parameters.HideWhenFocusLost;
+        public bool HideWhenForegroundLost => Parameters.HideWhenForegroundLost;
 
         /// <summary>
         /// Implement IsPopup 
