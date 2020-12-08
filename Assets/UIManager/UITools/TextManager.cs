@@ -40,22 +40,27 @@ namespace Lucine.Helpers
 
         public void LoadFromStreamingAssets(string databaseName)
         {
-            /*
             string url = Application.streamingAssetsPath + "/" + databaseName;
 
-            using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
-            {
-                yield return webRequest.SendWebRequest();
-                
-                if(webRequest.)
-            }
-            
-            HttpWebRequest req = HttpWebRequest(url);
-            */
-            
+            StartCoroutine(LoadIt(url));
         }
 
+        private IEnumerator LoadIt(string filePath)
+        {
+            UnityWebRequest www = UnityWebRequest.Get(filePath);
+            yield return www.SendWebRequest();
 
+            if (www.isNetworkError)
+            {
+                Debug.Log("Error: " + www.error);
+            }
+            else
+            {
+                string xmlDatabase = www.downloadHandler.text;
+                Debug.Log("Received: " + xmlDatabase);
+                m_TextDatabase = TextDatabase.Deserialize(xmlDatabase);
+            }
+        }
 
         /// <summary>
         /// Load the text database with the given name from the given source
