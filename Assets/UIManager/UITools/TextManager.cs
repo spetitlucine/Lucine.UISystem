@@ -23,7 +23,7 @@ namespace Lucine.Helpers
 
         private TextDatabase m_TextDatabase = new TextDatabase();
 
-        void Start()
+        void Awake()
         {
             LoadDatabase(m_Source,m_TextDatabaseName);
         }
@@ -40,7 +40,7 @@ namespace Lucine.Helpers
 
         public void LoadFromStreamingAssets(string databaseName)
         {
-            string url = Application.streamingAssetsPath + "/" + databaseName;
+            string url = "file:///" + Application.streamingAssetsPath + "/" + databaseName;
 
             StartCoroutine(LoadIt(url));
         }

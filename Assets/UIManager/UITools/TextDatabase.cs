@@ -11,8 +11,13 @@ using UnityEngine;
 
 namespace Lucine.Helpers
 {
+    /// <summary>
+    /// Dictionary are not serializable by default
+    /// This class extends Dictionary and implements IXmlSerializable in order to do it
+    /// </summary>
+    /// <typeparam name="TKey">will be string</typeparam>
+    /// <typeparam name="TValue">will be string</typeparam>
     [Serializable]
-    [XmlRoot("Texts")]
     public class Database<TKey, TValue> : Dictionary<TKey, TValue>, IXmlSerializable
     {
         public XmlSchema GetSchema()
@@ -50,6 +55,10 @@ namespace Lucine.Helpers
         }
     }
     
+    
+    /// <summary>
+    /// This is the class containing the text database and can be serialized or deserialized
+    /// </summary>
     [Serializable]
     public class TextDatabase
     {
@@ -57,11 +66,13 @@ namespace Lucine.Helpers
 
         public TextDatabase()
         {
-            Texts.Add("ID1", "Texte id 1");
-            Texts.Add("ID2", "Texte id 2");
-            Debug.Log(TextDatabase.Serialize(this));
         }
         
+        /// <summary>
+        /// Create a TextDatabase object from xml string
+        /// </summary>
+        /// <param name="xmlString">the xml string</param>
+        /// <returns></returns>
         public static TextDatabase Deserialize(string xmlString)
         {
             var serializer = new XmlSerializer(typeof(TextDatabase));
@@ -75,6 +86,12 @@ namespace Lucine.Helpers
             return result;
         }
 
+        /// <summary>
+        /// Serialize a text dabatabase, not really used at the moment but to show a sample
+        /// Could be used if we make a text editor and that the database could be saved
+        /// </summary>
+        /// <param name="database"></param>
+        /// <returns></returns>
         public static string Serialize(TextDatabase database)
         {
             var serializer = new XmlSerializer(typeof(TextDatabase));
@@ -86,11 +103,27 @@ namespace Lucine.Helpers
             }
         }
 
+        /// <summary>
+        /// Get the string corresponding to the given ID
+        /// It is case sensitive
+        /// </summary>
+        /// <param name="textId">ID of the text to get</param>
+        /// <returns>The corresponding text or ID not found... if not found</returns>
         public string GetText(string textId)
         {
             string result = textId + " not found...";
             Texts.TryGetValue(textId, out result);
             return result;
+        }
+
+        /// <summary>
+        /// Could be called from start to display an xml sample that can be base of work when no textdatabase available in project
+        /// </summary>
+        private void ShowXmlSample()
+        {
+            Texts.Add("ID1", "Texte id 1");
+            Texts.Add("ID2", "Texte id 2");
+            Debug.Log(TextDatabase.Serialize(this));
         }
     }
 }

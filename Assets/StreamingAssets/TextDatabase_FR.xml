@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TextDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Texts>
+    <Entry Id="ID_SHOWPANEL1" Text="Show panel 1" />
+    <Entry Id="ID_SHOWPANEL2" Text="Show panel 2" />
+    <Entry Id="ID_TITLEPANEL1" Text="Panel 1" />
+    <Entry Id="ID_TITLEPANEL2" Text="Panel 2" />
+    <Entry Id="ID_CLOSEPANEL1" Text="Close Panel 1" />
+    <Entry Id="ID_CLOSEPANEL2" Text="Close Panel 2" />
+    <Entry Id="ID_QUIT" Text="Quit" />
+    <Entry Id="ID_QUITMSG" Text="Ok to quit ?" />
+    <Entry Id="ID_OK" Text="OK" />
+    <Entry Id="ID_CANCEL" Text="Cancel" />
+	<Entry Id="ID_ENTERTEXT" Text="type in text..." />
+  </Texts>
+</TextDatabase>
