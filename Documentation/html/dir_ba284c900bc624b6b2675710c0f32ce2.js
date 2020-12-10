@@ -1,5 +1,6 @@
 var dir_ba284c900bc624b6b2675710c0f32ce2 =
 [
+    [ "Resources", "dir_ffc60f4d909bb2966a42209110d2c48d.html", null ],
     [ "DemoPanel.cs", "_demo_panel_8cs.html", [
       [ "DemoPanel", "class_demo_panel.html", "class_demo_panel" ],
       [ "OnPanelClosedEvent", "class_demo_panel_1_1_on_panel_closed_event.html", null ]

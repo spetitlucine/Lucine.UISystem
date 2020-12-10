@@ -12,6 +12,7 @@ var namespace_lucine_1_1_u_i_system =
     [ "UIPanelLayer", "class_lucine_1_1_u_i_system_1_1_u_i_panel_layer.html", "class_lucine_1_1_u_i_system_1_1_u_i_panel_layer" ],
     [ "UIPanelParameters", "class_lucine_1_1_u_i_system_1_1_u_i_panel_parameters.html", null ],
     [ "UIScreenController", "class_lucine_1_1_u_i_system_1_1_u_i_screen_controller.html", "class_lucine_1_1_u_i_system_1_1_u_i_screen_controller" ],
+    [ "UIText", "class_lucine_1_1_u_i_system_1_1_u_i_text.html", "class_lucine_1_1_u_i_system_1_1_u_i_text" ],
     [ "UITransition", "class_lucine_1_1_u_i_system_1_1_u_i_transition.html", "class_lucine_1_1_u_i_system_1_1_u_i_transition" ],
     [ "UIWindow", "class_lucine_1_1_u_i_system_1_1_u_i_window.html", null ],
     [ "UIWindowLayer", "class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html", "class_lucine_1_1_u_i_system_1_1_u_i_window_layer" ],

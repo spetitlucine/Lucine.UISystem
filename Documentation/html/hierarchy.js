@@ -1,7 +1,12 @@
 var hierarchy =
 [
+    [ "Lucine.Helpers.Database< string, string >", "class_lucine_1_1_helpers_1_1_database.html", null ],
+    [ "Dictionary", null, [
+      [ "Lucine.Helpers.Database< TKey, TValue >", "class_lucine_1_1_helpers_1_1_database.html", null ]
+    ] ],
     [ "Lucine.Helpers.Event", "class_lucine_1_1_helpers_1_1_event.html", [
-      [ "ApplicationQuitEvent", "class_application_quit_event.html", null ]
+      [ "ApplicationQuitEvent", "class_application_quit_event.html", null ],
+      [ "Lucine.Helpers.OnTextDatabaseChanged", "class_lucine_1_1_helpers_1_1_on_text_database_changed.html", null ]
     ] ],
     [ "Lucine.Helpers.Event< DemoPanel >", "class_lucine_1_1_helpers_1_1_event.html", [
       [ "DemoPanel.OnPanelClosedEvent", "class_demo_panel_1_1_on_panel_closed_event.html", null ]
@@ -33,10 +38,14 @@ var hierarchy =
         ] ]
       ] ]
     ] ],
+    [ "IXmlSerializable", null, [
+      [ "Lucine.Helpers.Database< TKey, TValue >", "class_lucine_1_1_helpers_1_1_database.html", null ]
+    ] ],
     [ "MonoBehaviour", null, [
       [ "BlackBackground", "class_black_background.html", null ],
       [ "Lucine.UISystem.UILayerController< TScreenController >", "class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html", null ],
       [ "Lucine.UISystem.UIScreenController< TParameters >", "class_lucine_1_1_u_i_system_1_1_u_i_screen_controller.html", null ],
+      [ "Lucine.UISystem.UIText", "class_lucine_1_1_u_i_system_1_1_u_i_text.html", null ],
       [ "Lucine.UISystem.UITransition", "class_lucine_1_1_u_i_system_1_1_u_i_transition.html", [
         [ "FadeTransition", "class_fade_transition.html", null ]
       ] ],
@@ -46,9 +55,13 @@ var hierarchy =
     [ "Singleton< Events >", "class_singleton.html", [
       [ "Lucine.Helpers.Events", "class_lucine_1_1_helpers_1_1_events.html", null ]
     ] ],
+    [ "Singleton< TextManager >", "class_singleton.html", [
+      [ "Lucine.Helpers.TextManager", "class_lucine_1_1_helpers_1_1_text_manager.html", null ]
+    ] ],
     [ "Singleton< UIController >", "class_singleton.html", [
       [ "Lucine.UISystem.UIController", "class_lucine_1_1_u_i_system_1_1_u_i_controller.html", null ]
     ] ],
+    [ "Lucine.Helpers.TextDatabase", "class_lucine_1_1_helpers_1_1_text_database.html", null ],
     [ "Lucine.UISystem.UILayerController< IUIPanelController >", "class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html", [
       [ "Lucine.UISystem.UIPanelLayer", "class_lucine_1_1_u_i_system_1_1_u_i_panel_layer.html", null ]
     ] ],

@@ -7,45 +7,76 @@ using UnityEngine.UI;
 
 namespace Lucine.Helpers
 {
+    /// <summary>
+    /// You can register to this event to be notified when database has been refreshed
+    /// </summary>
+    public class OnTextDatabaseChanged : Event { }
+
     public class TextManager : Singleton<TextManager>
     {
+        /// <summary>
+        /// Enumeration of location for TextDatabase
+        /// </summary>
         public enum FileSource
         {
-            StreamingAsset,
+            StreamingAssets,
             Resources
         };
         
+        // Where is located the text database
         [SerializeField]
         protected FileSource m_Source;
+        // what is its name (no extension if in resources)
         [SerializeField]
         protected string m_TextDatabaseName;
 
 
+        /// <summary>
+        /// The text database that will be filled !
+        /// </summary>
         private TextDatabase m_TextDatabase = new TextDatabase();
 
+        /// <summary>
+        /// On awake the database is loaded from the specified source
+        /// You can also call LoadDatabase manually if you want to change the database
+        /// </summary>
         void Awake()
         {
             LoadDatabase(m_Source,m_TextDatabaseName);
         }
         
-        
-        
+        /// <summary>
+        /// Load database from resources
+        /// </summary>
+        /// <param name="databaseName"></param>
         public void LoadFromResources(string databaseName)
         {
             TextAsset database = Resources.Load(databaseName) as TextAsset;
             string xmlDatabase = database.text;
 
             m_TextDatabase = TextDatabase.Deserialize(xmlDatabase);
+            
+            // dispatch information that database is refreshed
+            Events.Instance.TypeOf<OnTextDatabaseChanged>().Dispatch();
         }
-
+        
+        /// <summary>
+        /// Load database from StreamingAssets
+        /// </summary>
+        /// <param name="databaseName"></param>
         public void LoadFromStreamingAssets(string databaseName)
         {
             string url = "file:///" + Application.streamingAssetsPath + "/" + databaseName;
 
-            StartCoroutine(LoadIt(url));
+            StartCoroutine(LoadItAsync(url));
         }
 
-        private IEnumerator LoadIt(string filePath)
+        /// <summary>
+        /// really load the file async
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        private IEnumerator LoadItAsync(string filePath)
         {
             UnityWebRequest www = UnityWebRequest.Get(filePath);
             yield return www.SendWebRequest();
@@ -59,6 +90,7 @@ namespace Lucine.Helpers
                 string xmlDatabase = www.downloadHandler.text;
                 Debug.Log("Received: " + xmlDatabase);
                 m_TextDatabase = TextDatabase.Deserialize(xmlDatabase);
+                Events.Instance.TypeOf<OnTextDatabaseChanged>().Dispatch();
             }
         }
 
@@ -75,12 +107,17 @@ namespace Lucine.Helpers
                 case FileSource.Resources:
                     LoadFromResources(databaseName);
                     break;
-                case FileSource.StreamingAsset:
+                case FileSource.StreamingAssets:
                     LoadFromStreamingAssets(databaseName);
                     break;
             }
         }
 
+        /// <summary>
+        /// This function return the text corresponding to the specified id.
+        /// </summary>
+        /// <param name="textId">the id to retrieve</param>
+        /// <returns>The text corresponding to the id</returns>
         public string GetText(string textId)
         {
             return m_TextDatabase.GetText(textId);

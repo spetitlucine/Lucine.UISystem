@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['onclickclose_210',['OnClickClose',['../class_demo_window.html#af6ff3d452b872a97ca6bebb84cb68f8e',1,'DemoWindow']]],
-  ['onclickoncancel_211',['OnClickOnCancel',['../class_demo_popup.html#a40cee8a11e06dfa7262c48ad1eefa022',1,'DemoPopup']]],
-  ['onclickonok_212',['OnClickOnOk',['../class_demo_popup.html#a2329afd6d739b84005e9ddc74f32b9b4',1,'DemoPopup']]],
-  ['onclickshowpanel1_213',['OnClickShowPanel1',['../class_demo_window.html#acb40e84d36cbc917a1874ff3f40e21ce',1,'DemoWindow']]],
-  ['onclickshowpanel2_214',['OnClickShowPanel2',['../class_demo_window.html#a270804bc3ac0d86b2da72346e5205d27',1,'DemoWindow']]],
-  ['onclosepanel_215',['OnClosePanel',['../class_demo_panel.html#a4aadb5dbe70800de83c3cec9879ff7bd',1,'DemoPanel']]],
-  ['ondestroy_216',['OnDestroy',['../class_lucine_1_1_u_i_system_1_1_u_i_screen_controller.html#aa77f43962db3c28ca2fac79d1cf38d0c',1,'Lucine::UISystem::UIScreenController']]],
-  ['onparametersset_217',['OnParametersSet',['../class_lucine_1_1_u_i_system_1_1_u_i_screen_controller.html#a79717f7ff38c2310fb8d9fe5039fab33',1,'Lucine::UISystem::UIScreenController']]],
-  ['openwindow_218',['OpenWindow',['../class_lucine_1_1_u_i_system_1_1_u_i_controller.html#afef326931118c8277b6111809828ee2f',1,'Lucine::UISystem::UIController']]]
+  ['initialize_246',['Initialize',['../class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#a1da8b2106e135b9c91f721e3df977244',1,'Lucine.UISystem.UILayerController.Initialize()'],['../class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ab7ad652154253f753f088bf38005c803',1,'Lucine.UISystem.UIController.Initialize()'],['../class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a7a6463dcb421fedfa1654944ee885725',1,'Lucine.UISystem.UIWindowLayer.Initialize()']]],
+  ['ispanelvisible_247',['IsPanelVisible',['../class_lucine_1_1_u_i_system_1_1_u_i_panel_layer.html#ae8b8ba4fb6271fbe62400e1b79ddfce1',1,'Lucine.UISystem.UIPanelLayer.IsPanelVisible()'],['../class_lucine_1_1_u_i_system_1_1_u_i_controller.html#ab572dabbebf9dcd5ee49e5b272e32b45',1,'Lucine.UISystem.UIController.IsPanelVisible()']]],
+  ['isscreenregistered_248',['IsScreenRegistered',['../class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#a06389d4d9f8d55236791e67519e6c466',1,'Lucine.UISystem.UILayerController.IsScreenRegistered()'],['../class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a2505e3c72d39f999f4835ea586bfb133',1,'Lucine.UISystem.UIController.IsScreenRegistered(string screenId)'],['../class_lucine_1_1_u_i_system_1_1_u_i_controller.html#a19b65c385e96fa55808e8fc7cd47d869',1,'Lucine.UISystem.UIController.IsScreenRegistered(string screenId, out Type type)']]],
+  ['isscreenvisiblebyid_249',['IsScreenVisibleById',['../class_lucine_1_1_u_i_system_1_1_u_i_layer_controller.html#a2fa9cec1fab7f60b0e9223990fe51bb9',1,'Lucine::UISystem::UILayerController']]],
+  ['isvisible_250',['IsVisible',['../class_lucine_1_1_u_i_system_1_1_u_i_window_layer.html#a593449402aae8364b759a54a431f81a9',1,'Lucine::UISystem::UIWindowLayer']]],
+  ['iswindowvisible_251',['IsWindowVisible',['../class_lucine_1_1_u_i_system_1_1_u_i_controller.html#aeec731e93fa19f9add15e577f55707ec',1,'Lucine::UISystem::UIController']]]
 ];

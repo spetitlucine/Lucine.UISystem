@@ -14,6 +14,10 @@ public class DemoPopup : UIWindow
     {
     }
 
+    /// <summary>
+    /// Unity will call this with its event system when the ok button is pressed.
+    /// We hide all panels and windows and dispatch the ApplicationQuitEvent defined in UIStarter.cs
+    /// </summary>
     public void OnClickOnOk()
     {
         UIController.Instance.HideAllPanels();
@@ -21,6 +25,10 @@ public class DemoPopup : UIWindow
         Events.Instance.TypeOf<ApplicationQuitEvent>().Dispatch();
     }
 
+    /// <summary>
+    /// Unity will call this when cancel button is pressed.
+    /// Only hide the popup, no need to restore anything.
+    /// </summary>
     public void OnClickOnCancel()
     {
         UIController.Instance.CloseWindow("PopupWindow");        

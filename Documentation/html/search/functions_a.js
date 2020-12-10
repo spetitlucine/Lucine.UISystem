@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['typeof_3c_20eventtype_20_3e_230',['TypeOf&lt; EventType &gt;',['../class_lucine_1_1_helpers_1_1_events.html#a403a60deec514990ffb85bf8b1163148',1,'Lucine.Helpers.Events.TypeOf&lt; EventType &gt;()'],['../class_lucine_1_1_helpers_1_1_events_pool.html#a8a49b8cfdb7cf029ff3751c79a605db7',1,'Lucine.Helpers.EventsPool.TypeOf&lt; EventType &gt;()']]]
+  ['readxml_268',['ReadXml',['../class_lucine_1_1_helpers_1_1_database.html#a2fd10c3e8205c422e4802402f2cc6fa4',1,'Lucine::Helpers::Database']]],
+  ['removelistener_269',['RemoveListener',['../class_lucine_1_1_helpers_1_1_event.html#a2d7689c68ca4e830df15f7a5c773cdd3',1,'Lucine.Helpers.Event.RemoveListener(Action handler)'],['../class_lucine_1_1_helpers_1_1_event.html#a4701ff0192c498fd3d944d88fb0eb46d',1,'Lucine.Helpers.Event.RemoveListener(Action&lt; T &gt; handler)']]]
 ];
