@@ -48,12 +48,12 @@ namespace Lucine.UISystem
             
             m_WindowLayer = GetComponentInChildren<UIWindowLayer>();
             m_WindowLayer.Initialize();
-            m_WindowLayer.HideAll();
+            m_WindowLayer.HideAll(false);
             m_WindowLayer.DisableInteractionRequest += DisableRaycaster;
             m_WindowLayer.EnableInteractionRequest += EnableRaycaster;
             m_PanelLayer = GetComponentInChildren<UIPanelLayer>();
             m_PanelLayer.Initialize();
-            m_PanelLayer.HideAll();
+            m_PanelLayer.HideAll(false);
         }
 
         /// <summary>

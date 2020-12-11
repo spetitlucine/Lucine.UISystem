@@ -26,7 +26,7 @@ namespace Lucine.UISystem
         // Callback to call when we want to disable or enable interactions
         public Action DisableInteractionRequest;
         public Action EnableInteractionRequest;
-
+        
         /// <summary>
         /// Function that can indicated if any interaction is running
         /// </summary>
@@ -216,8 +216,8 @@ namespace Lucine.UISystem
             if(m_screensTransitioning.Contains(screen))
                 m_screensTransitioning.Remove(screen);
             else
-            {
-                Debug.Log("[UIWindowLayer : try to remove a transition not started");
+            { 
+                //Debug.Log("[UIWindowLayer : try to remove a transition not started");
             }
             
             // if no more transitions reactivate interaction
