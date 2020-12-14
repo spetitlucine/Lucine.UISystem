@@ -1,0 +1,19 @@
+{
+  "name": "com.lucine.helpers",
+  "version": "1.0.0",
+  "displayName": "Lucine Helpers",
+  "description": "Many usefull features for every projects, such as Events manager, Singleton, TextManager... Hope to be extended with many great features !",
+  "unity": "2019.3",
+  "unityRelease": "0b5",
+  "keywords": [
+    "Helpers",
+    "Singleton",
+    "Events",
+    "TextManager"
+  ],
+  "author": {
+    "name": "$all",
+    "email": "",
+    "url": ""
+  }
+}

@@ -1,5 +1,19 @@
 {
   "dependencies": {
+    "com.lucine.helpers": {
+      "version": "file:Lucine.Helpers",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.lucine.uisystem": {
+      "version": "file:Lucine.UISystem",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.lucine.helpers": "1.0.0"
+      }
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,

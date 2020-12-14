@@ -1,0 +1,15 @@
+{
+    "name": "Lucine.UISystem.Runtime",
+    "references": [
+        "GUID:3196e2b656aa9e94884a3c9e88684c9b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

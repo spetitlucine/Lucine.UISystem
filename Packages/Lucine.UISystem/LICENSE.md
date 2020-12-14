@@ -1,0 +1,1 @@
+This software is (c) Lucine and cannot be used outside Lucine company

@@ -1,0 +1,23 @@
+{
+  "name": "com.lucine.uisystem",
+  "version": "1.0.0",
+  "displayName": "Lucine UISystem",
+  "description": "UISystem lets you manager windows and panel in an easy way and make easy to add new feature by extending base classes",
+  "unity": "2019.3",
+  "unityRelease": "0b5",
+  "dependencies":{
+	"com.lucine.helpers":"1.0.0"
+  },
+  "keywords": [
+    "UISystem",
+    "Screen",
+    "Window",
+    "Panel",
+	"Interface"
+  ],
+  "author": {
+    "name": "Lucine",
+    "email": "",
+    "url": ""
+  }
+}
