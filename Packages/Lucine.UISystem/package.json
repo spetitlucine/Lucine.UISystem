@@ -1,12 +1,12 @@
 {
   "name": "com.lucine.uisystem",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "displayName": "Lucine UISystem",
   "description": "UISystem lets you manager windows and panel in an easy way and make easy to add new feature by extending base classes",
   "unity": "2019.3",
   "unityRelease": "0b5",
   "dependencies":{
-	"com.lucine.helpers":"1.0.1"
+	"com.lucine.helpers":"1.0.3"
   },
   "keywords": [
     "UISystem",
@@ -19,5 +19,10 @@
     "name": "Lucine.Traitement",
     "email": "",
     "url": ""
-  }
+  },
+  "samples":[{
+	"displayName": "UISystem sample",
+    "description": "Show windows, panel and popup sample",
+    "path": "Samples~/Sample"
+  }]
 }
