@@ -6,7 +6,7 @@
   "unity": "2019.3",
   "unityRelease": "0b5",
   "dependencies":{
-	"com.lucine.helpers":"1.0.0"
+	"com.lucine.helpers":"1.0.1"
   },
   "keywords": [
     "UISystem",
@@ -16,7 +16,7 @@
 	"Interface"
   ],
   "author": {
-    "name": "Lucine",
+    "name": "Lucine.Traitement",
     "email": "",
     "url": ""
   }
