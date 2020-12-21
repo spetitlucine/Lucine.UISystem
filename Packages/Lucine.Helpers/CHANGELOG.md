@@ -4,6 +4,8 @@
 
 1.0.1 Updated author name (Lucine.Traitement)
 
-1.02 Added documentation
+1.0.2 Added documentation
 
-1.03 Added Doxygen documentation link
+1.0.3 Added Doxygen documentation link
+
+1.0.4 Added missing images in documentation

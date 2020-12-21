@@ -75,7 +75,7 @@ This xmlfile can loaded by the TextManager from a file in StreamingAssets folder
 
 TextManager is a singleton that can be place where you want. In the sample it is located on the Starter GameObject.
 
-<img src="C:\lucine\UnityProjects\UISystem\Lucine.UISystem\Lucine.Helpers.Doc\images\Image2.png" style="zoom:100%;" />
+![](C:\lucine\UnityProjects\UISystem\Lucine.UISystem\Packages\Lucine.Helpers\Documentation~\images\Image2.png)
 
 You can select the TextDatabase name (no extension has to be given when using resources) and where to load it from. Resources =\> Resources folder, StreamingAssets, streaming assets folder (in this case you have to include the extension of the file). In the sample the file is present both in streamingassets and resources, in order you can test both methods.
 
@@ -83,9 +83,7 @@ When the file is loaded it fires an OnTextDabaseChanged event, you can register 
 
 That's what does UIText component
 
-![](C:\lucine\UnityProjects\UISystem\Lucine.UISystem\Lucine.Helpers.Doc\images\Image3.png)
-
-
+![](C:\lucine\UnityProjects\UISystem\Lucine.UISystem\Packages\Lucine.Helpers\Documentation~\images\Image3.png)
 
 This component requires that the gameobject on which it is, has also a TextComponent.
 
