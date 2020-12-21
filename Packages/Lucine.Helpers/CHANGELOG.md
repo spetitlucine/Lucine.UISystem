@@ -9,3 +9,7 @@
 1.0.3 Added Doxygen documentation link
 
 1.0.4 Added missing images in documentation
+
+1.0.5 Update documentation
+
+1.0.6 New publication because of bad dependency in UISystem
