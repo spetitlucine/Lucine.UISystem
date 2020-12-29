@@ -21,4 +21,6 @@
 
 1.0.8 Unpublished 1.0.2, 1.0.3, 1.0.4 updated logs and versions
 
+1.0.9 Added some Unit tests
+
 

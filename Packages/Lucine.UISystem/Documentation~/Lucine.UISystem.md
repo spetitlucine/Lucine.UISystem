@@ -6,7 +6,17 @@
 
 This documents explains how the Lucine.UISystem works. You can also find a doxygen documentation of alls classes in the Documentation folder.
 
-[Doxygen documentation is here](html/index.html)
+## [Doxygen documentation is here](html/index.html)
+
+## Unit tests are in Tests/Runtime folder
+
+They check that an inherited screen (just like a window or a panel) has the following requirements
+
+- By default IsVisible is false 
+- ScreenId is correctly set to the gameobject name
+- When showed IsVisible becomes true and InTransistionFinished event is dispatched
+- When closed IsVisible becomes false, OutTransitionFinished event is dispatched and OnCloseRequest is dispatched too.
+- When screen is destroyed, the OnScreenDestroyed event is dispatched.
 
 ## Some definition
 

@@ -2,7 +2,32 @@
 
 Some little tools that help Lucine Apps
 
-[Doxygen documentation is here](html/index.html)
+
+
+## [Doxygen documentation is here](html/index.html)
+
+## Unit tests are in Test/Runtime folder
+
+### Events
+
+The tests checks for that :
+
+- When adding a listener and dispatch an event with no parameters the event is called
+- When dispatching another time the event is called
+- When removing the listener and dispatch the event no more call is done
+- Same for events with one parameter
+
+
+
+### TextManager
+
+The tests checks for that :
+
+- Loading from an xml string is ok and the OnTextDatabaseChanged event is called.
+- Once loaded we can get "ID_1" and "ID_2" corresponding text
+- But we can't get "ID_3" text because it doesn't exists
+
+
 
 ## Lucine.Helpers.Events
 

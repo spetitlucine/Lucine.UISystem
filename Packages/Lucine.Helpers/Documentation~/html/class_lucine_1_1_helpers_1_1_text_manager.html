@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lucine.Helpers
-   &#160;<span id="projectnumber">1.04</span>
+   &#160;<span id="projectnumber">1.0.7</span>
    </div>
    <div id="projectbrief">Some helpers to write great apps !</div>
   </td>
@@ -96,6 +96,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8385ea6abc84ae0d41d43d08e3f0bb53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_helpers_1_1_text_manager.html#a8385ea6abc84ae0d41d43d08e3f0bb53">LoadFromString</a> (string xmlString)</td></tr>
+<tr class="memdesc:a8385ea6abc84ae0d41d43d08e3f0bb53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load database from a string  <a href="class_lucine_1_1_helpers_1_1_text_manager.html#a8385ea6abc84ae0d41d43d08e3f0bb53">More...</a><br /></td></tr>
+<tr class="separator:a8385ea6abc84ae0d41d43d08e3f0bb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5b7200aeb0c67980ef986bbe6391a05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lucine_1_1_helpers_1_1_text_manager.html#af5b7200aeb0c67980ef986bbe6391a05">LoadFromResources</a> (string databaseName)</td></tr>
 <tr class="memdesc:af5b7200aeb0c67980ef986bbe6391a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load database from resources  <a href="class_lucine_1_1_helpers_1_1_text_manager.html#af5b7200aeb0c67980ef986bbe6391a05">More...</a><br /></td></tr>
 <tr class="separator:af5b7200aeb0c67980ef986bbe6391a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +120,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a22325f39eb61d64bce4fefa3a6096805"><td class="memItemLeft" align="right" valign="top"><a id="a22325f39eb61d64bce4fefa3a6096805"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>m_TextDatabaseName</b></td></tr>
 <tr class="separator:a22325f39eb61d64bce4fefa3a6096805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee2417ffc35971af88390c3a8648bf8e"><td class="memItemLeft" align="right" valign="top"><a id="aee2417ffc35971af88390c3a8648bf8e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_InitOnAwake</b> = false</td></tr>
+<tr class="separator:aee2417ffc35971af88390c3a8648bf8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -294,6 +300,40 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">databaseName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8385ea6abc84ae0d41d43d08e3f0bb53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8385ea6abc84ae0d41d43d08e3f0bb53">&#9670;&nbsp;</a></span>LoadFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lucine.Helpers.TextManager.LoadFromString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>xmlString</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load database from a string </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xmlString</td><td>The string from which to load xml</td></tr>
   </table>
   </dd>
 </dl>

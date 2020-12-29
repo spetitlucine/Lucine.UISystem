@@ -111,8 +111,12 @@ namespace Lucine.Helpers
         /// <returns>The corresponding text or ID not found... if not found</returns>
         public string GetText(string textId)
         {
-            string result = textId + " not found...";
-            Texts.TryGetValue(textId, out result);
+            Texts.TryGetValue(textId, out string result);
+            if (result == null)
+            {
+                result = textId + " not found...";
+            }
+            
             return result;
         }
 

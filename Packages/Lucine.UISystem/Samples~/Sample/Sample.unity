@@ -1328,6 +1328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Source: 1
   m_TextDatabaseName: TextDatabase_FR
+  m_InitOnAwake: 1
 --- !u!1 &1056276552
 GameObject:
   m_ObjectHideFlags: 0

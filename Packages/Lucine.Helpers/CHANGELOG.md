@@ -13,3 +13,5 @@
 1.0.5 Update documentation
 
 1.0.6 New publication because of bad dependency in UISystem
+
+1.0.7 Added some Unit tests

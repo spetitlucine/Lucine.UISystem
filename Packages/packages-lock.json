@@ -11,7 +11,7 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.lucine.helpers": "1.0.3"
+        "com.lucine.helpers": "1.0.7"
       }
     },
     "com.unity.2d.sprite": {

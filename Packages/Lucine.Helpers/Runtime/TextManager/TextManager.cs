@@ -29,6 +29,10 @@ namespace Lucine.Helpers
         // what is its name (no extension if in resources)
         [SerializeField]
         protected string m_TextDatabaseName;
+        // init at awake
+        [SerializeField]
+        protected bool m_InitOnAwake = false;
+        
 
 
         /// <summary>
@@ -42,9 +46,24 @@ namespace Lucine.Helpers
         /// </summary>
         void Awake()
         {
-            LoadDatabase(m_Source,m_TextDatabaseName);
+            if (m_InitOnAwake)
+            {
+                LoadDatabase(m_Source, m_TextDatabaseName);
+            }
         }
         
+        /// <summary>
+        /// Load database from a string
+        /// </summary>
+        /// <param name="xmlString">The string from which to load xml</param>
+        public void LoadFromString(string xmlString)
+        {
+            m_TextDatabase = TextDatabase.Deserialize(xmlString);
+            
+            // dispatch information that database is refreshed
+            Events.Instance.TypeOf<OnTextDatabaseChanged>().Dispatch();
+        }
+
         /// <summary>
         /// Load database from resources
         /// </summary>
@@ -53,11 +72,8 @@ namespace Lucine.Helpers
         {
             TextAsset database = Resources.Load(databaseName) as TextAsset;
             string xmlDatabase = database.text;
-
-            m_TextDatabase = TextDatabase.Deserialize(xmlDatabase);
             
-            // dispatch information that database is refreshed
-            Events.Instance.TypeOf<OnTextDatabaseChanged>().Dispatch();
+            LoadFromString(xmlDatabase);
         }
         
         /// <summary>
@@ -89,8 +105,7 @@ namespace Lucine.Helpers
             {
                 string xmlDatabase = www.downloadHandler.text;
                 Debug.Log("Received: " + xmlDatabase);
-                m_TextDatabase = TextDatabase.Deserialize(xmlDatabase);
-                Events.Instance.TypeOf<OnTextDatabaseChanged>().Dispatch();
+                LoadFromString(xmlDatabase);
             }
         }
 
